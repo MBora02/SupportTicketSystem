@@ -1,6 +1,0 @@
-{
-  "SupportTicketSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Bora\\Desktop\\projects\\SupportTicketSystem\\src\\SupportTicketSystem.Application",
-  "SupportTicketSystem.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Bora\\Desktop\\projects\\SupportTicketSystem\\src\\SupportTicketSystem.Domain",
-  "SupportTicketSystem.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Bora\\Desktop\\projects\\SupportTicketSystem\\src\\SupportTicketSystem.Infrastructure",
-  "SupportTicketSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\Users\\Bora\\Desktop\\projects\\SupportTicketSystem\\src\\SupportTicketSystem.WebApi"
-}
