@@ -1,0 +1,11 @@
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\bin\Debug\net10.0\SupportTicketSystem.Domain.deps.json
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\bin\Debug\net10.0\SupportTicketSystem.Domain.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\bin\Debug\net10.0\SupportTicketSystem.Domain.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.AssemblyInfoInputs.cache
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.AssemblyInfo.cs
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\refint\SupportTicketSystem.Domain.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\SupportTicketSystem.Domain.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Domain\obj\Debug\net10.0\ref\SupportTicketSystem.Domain.dll

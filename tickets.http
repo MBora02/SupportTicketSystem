@@ -1,0 +1,33 @@
+@hostname = localhost
+@port = 5104
+@host = http://{{hostname}}:{{port}}
+
+### 1. Yeni Destek Talebi Oluştur (Başarılı İstek)
+POST {{host}}/api/tickets
+Content-Type: application/json
+
+{
+  "title": "Veritabanı Bağlantı Hatası",
+  "description": "PostgreSQL veritabanı bağlantısı kurulurken timeout hatası alıyorum.",
+  "priority": 4,
+  "createdBy": "ahmet.yilmaz@sirket.com"
+}
+
+### 2. Yeni Destek Talebi Oluştur (Validasyon Hatası Testi)
+# E-posta hatalı ve başlık boş olamaz kurallarının tetiklenmesi gerekir.
+POST {{host}}/api/tickets
+Content-Type: application/json
+
+{
+  "title": "",
+  "description": "Kısa açıklama",
+  "priority": 1,
+  "createdBy": "gecersiz-eposta"
+}
+
+### 3. Tüm Biletleri Listele
+GET {{host}}/api/tickets
+
+### 4. Tek Bilet Detayını Getir (Yukarıdaki oluşturulan Id ile değiştirilmelidir)
+# Örn: GET {{host}}/api/tickets/c531d044-fcd7-48f8-b391-497de2a5b1fb
+GET {{host}}/api/tickets/00000000-0000-0000-0000-000000000000

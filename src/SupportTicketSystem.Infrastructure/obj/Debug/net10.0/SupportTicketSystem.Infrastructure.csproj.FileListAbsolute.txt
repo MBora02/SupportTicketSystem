@@ -1,0 +1,17 @@
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Infrastructure.deps.json
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Infrastructure.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Infrastructure.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Application.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Domain.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Application.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\bin\Debug\net10.0\SupportTicketSystem.Domain.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.AssemblyInfo.cs
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportT.099AA69F.Up2Date
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\refint\SupportTicketSystem.Infrastructure.dll
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\SupportTicketSystem.Infrastructure.pdb
+C:\Users\Bora\Desktop\projects\SupportTicketSystem\src\SupportTicketSystem.Infrastructure\obj\Debug\net10.0\ref\SupportTicketSystem.Infrastructure.dll
