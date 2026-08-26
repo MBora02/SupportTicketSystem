@@ -1,8 +1,10 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using SupportTicketSystem.Application.Tickets.Commands.AddComment;
 using SupportTicketSystem.Application.Tickets.Commands.CreateTicket;
 using SupportTicketSystem.Application.Tickets.Queries.GetTicketById;
 using SupportTicketSystem.Application.Tickets.Queries.GetTicketsList;
+using SupportTicketSystem.Domain.Enums;
 
 namespace SupportTicketSystem.WebApi.Controllers;
 
@@ -47,5 +49,25 @@ public class TicketsController : ControllerBase
         }
 
         return Ok(ticket);
+    }// POST /api/tickets/{id}/comments - Bilete Yorum Ekleme ve Durum Güncelleme
+    // (Yeni eklediğimiz endpoint)
+    [HttpPost("{id:guid}/comments")]
+    public async Task<IActionResult> AddComment(
+        [FromRoute] Guid id,
+        [FromBody] AddCommentRequest request,
+        CancellationToken cancellationToken)
+    {
+        // URL'den aldığımız 'id' ile Body'den aldığımız verileri birleştirip Command nesnesi üretiyoruz
+        var command = new AddCommentCommand(id, request.Content, request.CreatedBy, request.NewStatus);
+
+        var commentId = await _sender.Send(command, cancellationToken);
+
+        return Ok(commentId);
     }
 }
+// API'ye bilet kimliği dışındaki bilgileri göndermek için kullandığımız sadeleştirilmiş istek gövdesi (Body) modeli
+public record AddCommentRequest(
+    string Content,
+    string CreatedBy,
+    TicketStatus? NewStatus
+);

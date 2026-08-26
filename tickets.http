@@ -30,4 +30,38 @@ GET {{host}}/api/tickets
 
 ### 4. Tek Bilet Detayını Getir (Yukarıdaki oluşturulan Id ile değiştirilmelidir)
 # Örn: GET {{host}}/api/tickets/c531d044-fcd7-48f8-b391-497de2a5b1fb
-GET {{host}}/api/tickets/00000000-0000-0000-0000-000000000000
+GET {{host}}/api/tickets/0d4f4768-575c-4634-b3ea-3397d6c6a1d7
+
+
+
+### 5. Destek Talebine Yorum Ekle ve Durumu 'InProgress' Yap (Başarılı)
+# NOT: Buradaki ticketId değerini veritabanındaki gerçek bir bilet Id'si ile değiştir!
+@ticketId = 0d4f4768-575c-4634-b3ea-3397d6c6a1d7
+POST {{host}}/api/tickets/{{ticketId}}/comments
+Content-Type: application/json
+
+{
+  "content": "Sorun üzerinde çalışmaya başladım. Sunucu loglarını inceliyorum.",
+  "createdBy": "mehmet.uzman@sirket.com",
+  "newStatus": 2
+}
+
+### 6. Olmayan Bilete Yorum Ekleme Testi (404 Bulunamadı Testi)
+POST {{host}}/api/tickets/00000000-0000-0000-0000-000000000000/comments
+Content-Type: application/json
+
+{
+  "content": "Bu yorum hiç gitmemeli.",
+  "createdBy": "mehmet.uzman@sirket.com",
+  "newStatus": 2
+}
+
+### 7. Yorum Eklerken Hatalı Veri Testi (400 Validasyon Testi)
+POST {{host}}/api/tickets/{{ticketId}}/comments
+Content-Type: application/json
+
+{
+  "content": "",
+  "createdBy": "gecersiz-eposta",
+  "newStatus": 99
+}

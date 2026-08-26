@@ -18,11 +18,11 @@ public class GlobalExceptionHandler : IExceptionHandler
         Exception exception,
         CancellationToken cancellationToken)
     {
-        _logger.LogError(exception, "Uygulamada beklenmeyen bir hata oluştu: {Message}", exception.Message);
+        _logger.LogError(exception, "Uygulamada bir hata oluştu: {Message}", exception.Message);
 
         ProblemDetails problemDetails;
 
-        // Eğer hata validasyon hatası ise (FluentValidation fırlattıysa)
+        // 1. Validasyon Hatası (400 Bad Request)
         if (exception is ValidationException validationException)
         {
             var errors = validationException.Errors
@@ -44,9 +44,23 @@ public class GlobalExceptionHandler : IExceptionHandler
             problemDetails.Extensions.Add("errors", errors);
             httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
         }
+        // 2. Kaynak Bulunamadı Hatası (404 Not Found) - YENİ EKLEDİĞİMİZ KISIM
+        else if (exception is KeyNotFoundException keyNotFoundException)
+        {
+            problemDetails = new ProblemDetails
+            {
+                Status = StatusCodes.Status404NotFound,
+                Type = "https://tools.ietf.org/html/rfc7231#section-6.5.4",
+                Title = "Kaynak Bulunamadı",
+                Detail = keyNotFoundException.Message,
+                Instance = httpContext.Request.Path
+            };
+
+            httpContext.Response.StatusCode = StatusCodes.Status404NotFound;
+        }
+        // 3. Genel Sistem Hatası (500 Internal Server Error)
         else
         {
-            // Genel sistem hataları için (500 Internal Server Error)
             problemDetails = new ProblemDetails
             {
                 Status = StatusCodes.Status500InternalServerError,
@@ -61,6 +75,6 @@ public class GlobalExceptionHandler : IExceptionHandler
 
         await httpContext.Response.WriteAsJsonAsync(problemDetails, cancellationToken);
 
-        return true; // Hatanın ele alındığını (handled) belirtir
+        return true;
     }
 }

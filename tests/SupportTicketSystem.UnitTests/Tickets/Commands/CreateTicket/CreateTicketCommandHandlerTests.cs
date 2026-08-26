@@ -17,6 +17,15 @@ public class CreateTicketCommandHandlerTests
         // ITicketRepository arayüzünün taklidini (Mock) oluşturuyoruz
         _ticketRepositoryMock = Substitute.For<ITicketRepository>();
 
+        // Taklit repository'nin AddAsync metodunun bilet nesnesine Guid atamasını sağlıyoruz (EF Core davranışını taklit eder)
+        _ticketRepositoryMock.AddAsync(Arg.Any<Ticket>(), Arg.Any<CancellationToken>())
+            .Returns(x => 
+            {
+                var ticket = (Ticket)x[0];
+                ticket.Id = Guid.NewGuid();
+                return Task.CompletedTask;
+            });
+
         // Handler'ımıza bu taklit repository'yi enjekte ediyoruz
         _handler = new CreateTicketCommandHandler(_ticketRepositoryMock);
     }
